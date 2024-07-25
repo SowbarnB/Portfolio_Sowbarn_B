@@ -1,6 +1,6 @@
 /* Global Styles */
 html {
-  background-color: #1B262C;
+  background-color: #1b262c;
 }
 
 * {
@@ -8,9 +8,19 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-
+.navbar-content{
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  background-color: #0F4C75;
+  padding: 20px 5%;
+  z-index: 100;
+}
 /* Navbar Styles */
-.logocombo {
+/* .logocombo {
   font-family: "Poppins", sans-serif;
   position: fixed;
   top: 0;
@@ -19,28 +29,22 @@ html {
   padding: 20px 10%;
   background-color: #0F4C75;
   display: flex;
-  align-items: center;
   z-index: 100;
-}
+}*/
 
 .navbarcomponent {
-  font-family: "Poppins", sans-serif;
-  position: fixed;
-  top: 5px;
-  left: 50%;
-  width: 100%;
-  padding: 20px 10%;
-  background-color: #0F4C75;
-  display: flex;
-  align-items: center;
-  z-index: 100;
-}
+  padding-top: 10px;
+  display: inline;
+  align-items: end;
+} 
 
 .logo {
   font-size: 25px;
   color: white;
   text-decoration: none;
   font-weight: 700;
+  position: relative;
+  top: 0;
 }
 
 .logoimg {
@@ -54,12 +58,12 @@ html {
   font-weight: 500;
   margin-left: 35px;
   transition: .3s;
+  
 }
 
 .navbar a:hover {
-  color: #3282B8;
+  color: #00abf0;
 }
-
 /* Hero Section Styles */
 .home {
   height: 100vh;
@@ -91,8 +95,8 @@ html {
 .home-content h3 {
   font-size: 40px;
   color: transparent;
-  -webkit-text-stroke: .5px #fff;
-  background-image: linear-gradient(#00abf0,#00abf0);
+  -webkit-text-stroke: 0.5px #fff;
+  background-image: linear-gradient(#00abf0, #00abf0);
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-position: -300px 0;
@@ -100,10 +104,13 @@ html {
 }
 
 @keyframes animateText {
-  0%,95%,100% {
+  0%,
+  95%,
+  100% {
     background-position: -410px 0;
   }
-  65%,85% {
+  65%,
+  85% {
     background-position: 0 0;
   }
 }
@@ -135,7 +142,7 @@ html {
   color: #00abf0;
   text-decoration: none;
   margin-left: 12px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .home-sci a:hover {
@@ -155,7 +162,7 @@ html {
   font-weight: 600;
   letter-spacing: 1px;
   box-shadow: 0 0 10px #00abf0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .btn:hover {
@@ -175,8 +182,8 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-
 .about h2 {
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -205,11 +212,13 @@ html {
 /* Projects Section Styles */
 .projects {
   padding: 50px 10%;
+  justify-content: space-between;
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
 .projects h2 {
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -244,8 +253,21 @@ html {
 }
 
 .skills h2 {
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 30px;
+}
+.skills-logo {
+  /* width: 25px;
+  position: relative;
+  top: 8px;
+  margin-top: -5px;
+  margin-right: 3px; */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .skills ul {
@@ -274,6 +296,7 @@ html {
 .experience h2,
 .education h2,
 .certifications h2 {
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -293,6 +316,11 @@ html {
   padding: 20px;
   border-radius: 10px;
 }
+.certifications a{
+  color: #00abf0;
+  text-decoration: none;
+  margin-right: 10px;
+}
 
 /* Contact Section Styles */
 .contact {
@@ -302,6 +330,7 @@ html {
 }
 
 .contact h2 {
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -333,7 +362,13 @@ html {
 .contact button:hover {
   background-color: #3282b8;
 }
-
+.contact-info a{
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s;
+}
 /* Footer Styles */
 footer {
   padding: 20px 10%;
@@ -352,7 +387,3 @@ footer {
 .footer-sci a:hover {
   color: #fff;
 }
-
-
-
-
