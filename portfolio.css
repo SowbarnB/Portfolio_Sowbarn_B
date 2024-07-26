@@ -8,14 +8,15 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-.navbar-content{
+.navbar-content {
   font-family: "Poppins", sans-serif;
   position: fixed;
   top: 0;
   justify-content: space-between;
+  align-items: center;
   display: flex;
   width: 100%;
-  background-color: #0F4C75;
+  background-color: #0f4c75;
   padding: 20px 5%;
   z-index: 100;
 }
@@ -32,11 +33,15 @@ html {
   z-index: 100;
 }*/
 
+.menu-bar{
+  display: none;
+}
+
 .navbarcomponent {
   padding-top: 10px;
   display: inline;
   align-items: end;
-} 
+}
 
 .logo {
   font-size: 25px;
@@ -57,8 +62,7 @@ html {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transition: .3s;
-  
+  transition: 0.3s;
 }
 
 .navbar a:hover {
@@ -233,6 +237,11 @@ html {
   background-color: #0f4c75;
   padding: 20px;
   border-radius: 10px;
+  
+}
+.project:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s;
 }
 
 .project h3 {
@@ -283,6 +292,10 @@ html {
   padding: 10px 20px;
   border-radius: 20px;
 }
+.skills li:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
 
 /* Experience, Education, Certifications Section Styles */
 .experience,
@@ -292,6 +305,14 @@ html {
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
+
+.experience-list:hover,
+.education-item:hover,
+.certification-list:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
 
 .experience h2,
 .education h2,
@@ -316,7 +337,7 @@ html {
   padding: 20px;
   border-radius: 10px;
 }
-.certifications a{
+.certifications a {
   color: #00abf0;
   text-decoration: none;
   margin-right: 10px;
@@ -362,13 +383,76 @@ html {
 .contact button:hover {
   background-color: #3282b8;
 }
-.contact-info a{
+.contact-info a {
   font-size: 18px;
-  color: white;
+  color: #3282B8;
   text-decoration: none;
   font-weight: 500;
-  transition: .3s;
+  transition: 0.3s;
 }
+.contact-info a:first-child:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+/*BacktoTop*/
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #3282B8;
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
 /* Footer Styles */
 footer {
   padding: 20px 10%;
@@ -386,4 +470,32 @@ footer {
 
 .footer-sci a:hover {
   color: #fff;
+}
+
+@media (max-width: 500px) {
+  *{
+    /* overflow-x: hidden; */
+  }
+  .navbarcomponent{
+    display: none;
+  }
+  .menu-bar{
+    display: block;
+  }
+  .logocombo a{
+    display: flex;
+    align-items: center;
+  }
+  .home {
+    flex-direction: column;
+  }
+  .home-content h1, .home-content h3 {
+    font-size: 6vh;
+  }
+  .about-content{
+    flex-direction: column;
+  }
+  .about-image img{
+    width: 50%;
+  }
 }
