@@ -76,6 +76,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   padding: 0 10%;
+  position: relative;
 }
 
 .home-image {
@@ -87,10 +88,11 @@ html {
   border-radius: 20%;
   border: 25px solid #fff;
 }
-.i {
+.home-image img{
   width: 300px;
   height: 300px;
 }
+
 
 .home-content {
   max-width: 600px;
