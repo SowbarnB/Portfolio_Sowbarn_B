@@ -33,7 +33,7 @@ html {
   z-index: 100;
 }*/
 
-.menu-bar{
+.menu-bar {
   display: none;
 }
 
@@ -74,6 +74,7 @@ html {
   justify-content: space-between;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0 10%;
 }
 
@@ -82,11 +83,13 @@ html {
   justify-content: center;
   align-items: center;
   outline: 25px solid #00abf0;
-  width: 300px;
-  height: 300px;
   background: #00abf0;
   border-radius: 20%;
   border: 25px solid #fff;
+}
+.i {
+  width: 300px;
+  height: 300px;
 }
 
 .home-content {
@@ -196,6 +199,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .about-text {
@@ -237,9 +241,8 @@ html {
   background-color: #0f4c75;
   padding: 20px;
   border-radius: 10px;
-  
 }
-.project:hover{
+.project:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
@@ -308,11 +311,10 @@ html {
 
 .experience-list:hover,
 .education-item:hover,
-.certification-list:hover{
+.certification-list:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
-
 
 .experience h2,
 .education h2,
@@ -385,12 +387,12 @@ html {
 }
 .contact-info a {
   font-size: 18px;
-  color: #3282B8;
+  color: #3282b8;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
-.contact-info a:first-child:hover{
+.contact-info a:first-child:hover {
   transform: scale(1.1);
   transition: 0.5s;
 }
@@ -426,7 +428,7 @@ html {
   width: 140px;
   border-radius: 50px;
   transition-duration: 0.3s;
-  background-color: #3282B8;
+  background-color: #3282b8;
   align-items: center;
 }
 
@@ -473,29 +475,30 @@ footer {
 }
 
 @media (max-width: 500px) {
-  *{
+  * {
     /* overflow-x: hidden; */
   }
-  .navbarcomponent{
+  .navbarcomponent {
     display: none;
   }
-  .menu-bar{
+  .menu-bar {
     display: block;
   }
-  .logocombo a{
+  .logocombo a {
     display: flex;
     align-items: center;
   }
   .home {
     flex-direction: column;
   }
-  .home-content h1, .home-content h3 {
+  .home-content h1,
+  .home-content h3 {
     font-size: 6vh;
   }
-  .about-content{
+  .about-content {
     flex-direction: column;
   }
-  .about-image img{
+  .about-image img {
     width: 50%;
   }
 }
